@@ -1,4 +1,4 @@
-# [pepperSlider jQuery Plugin]
+# [pepperSlider jQuery Plugin](https://github.com/DamienSeguin/pepperSlider)
 
 pepperSlider is not another jQuery slider Plugin.  
 It contains the basics features you can expect from one of these sliders, but in a very concise way (less than 5Ko) and with a great retro-compatibility (up to IE6).
@@ -7,22 +7,22 @@ pepperSlider is:
 * Easy/Ready to use
 * Multipurpose: tab Handler, sliding page, or simply an image/content/whatever slider
 * Provided with an easy parallax module
-* Compatible: it degrades gracefully for browsers that doesn't support CSS3 animation - eg. IE6/7/8 - via Modernizr)
+* Compatible: it degrades gracefully for browsers that doesn't support CSS3 animations - eg. IE6/7/8 - via Modernizr)
 * Light: speed up your loading
 * Entirely customizable: only the logic is provided, the design and ideas are all yours - be creative !
-* Dependent only on jQuery/Zepto (quite common) and Moderninzr for detecting CSS3 animation
+* Dependent only on jQuery/Zepto (quite common) and Modernizr for detecting CSS3 animations
 
 ## Basic implementation
 Include at the end of your page, just before the `</body>` tag:
 
-	`<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 	<script type="text/javascript" src="js/jquery.pepperslider.js"></script>
 	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>`
+	<script src="js/main.js"></script>
 
 Put the code below in your HTML where you want:
 
-	`<div id="slider">
+	<div id="slider">
 		<ul>
 			<li class="red">
 				<h2>Red pepper ?</h2>
@@ -40,10 +40,12 @@ Put the code below in your HTML where you want:
 				<h2>You say ? Orange ?</h2>
 			</li>
 		</ul>
-	</div>`
+	</div>
+
+See `css/main.css` for a good start points.
 
 In a script file :
-	`$("#slider").pepperSlider();`
+	$("#slider").pepperSlider();
 
 Pretty easy huh?
 
@@ -53,32 +55,35 @@ Pretty easy huh?
 
 |Option|Type|Default
 |:---------|:---------:|:----------:|
-|**activeClass**: customize the main class that define active state on items|String|pepperSliderActiveClass|
+|**activeClass**: customize the main class that define active state on slides|String|pepperSliderActiveClass|
 |**animation**: fade or cycle for the time being|String|fade|
 |**continuous**: to loop animation automatically or not|Boolean|true|
 |**keyboardNav**: enable use of Left/Right arrow to navigate|Boolean|true|
 |**timer**: display duration|Number|3000|
 |**speed**: animation duration|Number|1000|
 |**parallax**: class for a parallax container (see Parallax usage)|Number|1000|
-|**overStop**: stop the animation when mouse hover the container. Avoid when onOff, next, prev, pagination are available. Useless for mobile usage.|Boolean|false|
+|**overStop**: stop the animation when mouse hover the container.|Boolean|false|
 |**startAt**: slide to display at the initialization|Number|1|
-|**pagination**: pagination module (see Pagination usage)|Object {id: string, type: number *or* array of string}|{id:"",type:""}|
+|**pagination**: pagination module (see Pagination usage)|Object|{id:"",type:""}|
 
 ### Controls
 
-|Control|Value
+|Control|Code
 |:---------|:---------:|
 |**prev**: link to previous slide |`<a href="#" data-controls="prev" id="prev">Previous Pepper</a>`|
 |**next**: link to next |`<a href="#" data-controls="next" id="next">Next Pepper</a>`|
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
+---
+Note : When use this controls, avoid using overStop options. Useless for mobile usage.
+
 ### Pagination usage
-The *pagination* option must be an object with an id for the container of the pagination (list of slides links) and a type namely a *number* for a numeric pagination or an *array* of *string*s for a custom pagination.
+The *pagination* option must be an object with an id for the container of the pagination (list of slides links) and a type namely a *number* for a numeric pagination or an *array* of *string* for a custom pagination.
 
 ### Parallax usage
 
 
-	`<li class="red">
+	<li class="red">
 		<h2>Red pepper ?</h2>
 		<div class="pepperSliderParallaxClass">
 			<img src="redPepperTop.png" alt=" " data-offset="500">
@@ -88,7 +93,7 @@ The *pagination* option must be an object with an id for the container of the pa
 			</p>
 			<i class="icon" data-offset="0"></i>
 		</div>
-	</li>`
+	</li>
 
 ---
 Note : to cancel the effect to items in the container `.pepperSliderParallaxClass`, set the data-offset of these items to 0.

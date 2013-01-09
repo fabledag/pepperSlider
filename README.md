@@ -75,7 +75,7 @@ Pretty easy huh?
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
 ---
-Note : When use this controls, avoid using overStop options. Useless for mobile usage.
+Note : When use this controls, avoid using overStop options.
 
 ### Pagination usage
 The *pagination* option must be an object with an id for the container of the pagination (list of slides links) and a type namely a *number* for a numeric pagination or an *array* of *string* for a custom pagination.

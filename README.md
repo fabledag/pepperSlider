@@ -42,7 +42,7 @@ Put the code below in your HTML where you want:
 		</ul>
 	</div>
 
-See `css/main.css` for a good start points.
+See `css/main.css` for a good start point.
 
 In a script file :
 	$("#slider").pepperSlider();
@@ -75,7 +75,7 @@ Pretty easy huh?
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
 ---
-Note : When use this controls, avoid using overStop options.
+Note : When use this controls, don't use overStop option (it's bad for UX).
 
 ### Pagination usage
 The *pagination* option must be an object with an id for the container of the pagination (list of slides links) and a type namely a *number* for a numeric pagination or an *array* of *string* for a custom pagination.

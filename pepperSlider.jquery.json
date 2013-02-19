@@ -20,7 +20,7 @@
     ],
     "bugs": "https://github.com/DamienSeguin/pepperSlider/issues",
     "homepage": "https://github.com/DamienSeguin/pepperSlider",
-    "docs": "https://github.com/DamienSeguin/pepperSlider/blob/master/README.md",
+    "docs": "https://github.com/DamienSeguin/pepperSlider/blob/master/README.md#basic-implementation",
     "dependencies": {
         "jquery": ">=1.4"
     }

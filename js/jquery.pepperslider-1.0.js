@@ -178,16 +178,16 @@
 					if($(this).parent().parent().hasClass(that.options.activeClass)) {
 						$(this).stop(true).animate({
 							"margin-left": 0
-						}, 500, this.options.easing);
+						}, 500, that.options.easing);
 					} else {
 						if($(this).parent().parent().hasClass("before")) {
 							$(this).stop(true).animate({
 								"margin-left": -offset
-							}, 500, this.options.easing);
+							}, 500, that.options.easing);
 						} else if($(this).parent().parent().hasClass("after")) {
 							$(this).stop(true).animate({
 								"margin-left": offset
-							}, 500, this.options.easing);
+							}, 500, that.options.easing);
 						}
 					}
 				});

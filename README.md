@@ -61,6 +61,7 @@ Pretty easy huh?
 |**timer**: display duration|Number|3000|
 |**speed**: animation duration|Number|1000|
 |**parallax**: class for a parallax container (see Parallax usage)|Number|1000|
+|**easing**: easing type for parallax|String|linear|
 |**overStop**: stop the animation when mouse hover the container.|Boolean|false|
 |**startAt**: slide to display at the initialization|Number|1|
 |**pagination**: pagination module (see Pagination usage)|Object|{id:"",type:""}|

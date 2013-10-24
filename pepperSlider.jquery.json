@@ -1,21 +1,22 @@
 {
     "name": "pepperSlider",
     "title": "jQuery pepperSlider",
-    "description": "pepperSlider is not another jQuery slider Plugin. It contains the basics features you can expect from one of these sliders, but in a very concise way (less than 5Ko) and with a great retro-compatibility (up to IE6).",
+    "description": "pepperSlider is not another jQuery slider Plugin. It contains the basics features you can expect from one of these sliders, but in a very concise way (less than 6Ko) and with a great retro-compatibility (up to IE6).",
     "keywords": [
         "slider",
         "slideshow",
         "parallax"
     ],
-    "version": "1.0.5",
+    "version": "2.0.0",
     "author": {
         "name": "Damien SEGUIN",
+        "email": "damienseguin.me@gmail.com",
         "url": "http://damienseguin.me/"
     },
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/DamienSeguin/pepperSlider"
+            "url": "https://github.com/DamienSeguin/pepperSlider/blob/master/jquery.pepperslider.js"
         }
     ],
     "bugs": "https://github.com/DamienSeguin/pepperSlider/issues",

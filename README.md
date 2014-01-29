@@ -79,7 +79,8 @@ Pretty easy huh?
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
 ---
-Note : When using these controls, don't use the overStop option (it's bad for UX).
+Note: If you have links inside your slides, add `data-bypass="true"` to cancel the preventDefault on it.
+Note: When using these controls, don't use the overStop option (it's bad for UX).
 
 ### Events
 
@@ -117,7 +118,7 @@ The *pagination* option must be an object with an id for the container of the pa
 	</li>
 
 ---
-Note : to cancel the effect to items in the container `.pepperSliderParallaxClass`, set the data-offset of these items to 0.
+Note: to cancel the effect to items in the container `.pepperSliderParallaxClass`, set the data-offset of these items to 0.
 
 
 ## License

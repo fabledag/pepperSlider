@@ -2,12 +2,12 @@
  * pepperSlider - pepperSlider is not another jQuery slider plugin.
  * It is easy/ready to use, multipurpose, ready for parallax, compatible, light, customizable...
  *
- * Copyright (c) 2012-2013 Damien SEGUIN - http://damienseguin.me
+ * Copyright (c) 2012-2014 Damien SEGUIN - http://damienseguin.me
  *
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  *
- * Version: 2.0.0
+ * Version: 2.0.1
  *
  */
 
@@ -104,7 +104,7 @@
 			}
 
 			// Eventlistener
-			this.$element.on("click", "a", $.proxy(this._on, this));
+			this.$element.on("click", "a:not([data-bypass])", $.proxy(this._on, this));
 			if (this.options.keyboardNav) {
 				that = this;
 				$(document).keydown(function(e) {

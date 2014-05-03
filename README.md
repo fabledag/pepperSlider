@@ -79,7 +79,6 @@ Pretty easy huh?
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
 ---
-Note: If you have links inside your slides, add `data-bypass="true"` to cancel the preventDefault on it.
 Note: When using these controls, don't use the overStop option (it's bad for UX).
 
 ### Events

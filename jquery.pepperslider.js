@@ -7,7 +7,7 @@
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  *
- * Version: 2.0.1
+ * Version: 2.0.2
  *
  */
 
@@ -104,7 +104,7 @@
 			}
 
 			// Eventlistener
-			this.$element.on("click", "a:not([data-bypass])", $.proxy(this._on, this));
+			this.$element.on("click", "a[data-controls]", $.proxy(this._on, this));
 			if (this.options.keyboardNav) {
 				that = this;
 				$(document).keydown(function(e) {

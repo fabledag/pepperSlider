@@ -16,12 +16,12 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/DamienSeguin/pepperSlider/blob/master/jquery.pepperslider.js"
+            "url": "https://github.com/dmnsgn/pepperSlider/blob/master/jquery.pepperslider.js"
         }
     ],
-    "bugs": "https://github.com/DamienSeguin/pepperSlider/issues",
-    "homepage": "https://github.com/DamienSeguin/pepperSlider",
-    "docs": "https://github.com/DamienSeguin/pepperSlider/blob/master/README.md#basic-implementation",
+    "bugs": "https://github.com/dmnsgn/pepperSlider/issues",
+    "homepage": "https://github.com/dmnsgn/pepperSlider",
+    "docs": "https://github.com/dmnsgn/pepperSlider/blob/master/README.md#basic-implementation",
     "dependencies": {
         "jquery": ">=1.4"
     }

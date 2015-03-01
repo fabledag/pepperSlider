@@ -68,14 +68,15 @@ Pretty easy huh?
 |**touchSensitivity**: set length of the swipe.|Number|30|
 |**overStop**: stop the animation when mouse hover the container.|Boolean|false|
 |**startAt**: slide to display at the initialization|Number|1|
+|**stopAtBounds**: stop the slider when reaching first or last slide|Boolean|false|
 |**pagination**: pagination module (see Pagination usage)|Object|{id:"",type:""}|
 
 ### Controls
 
 |Control|Code
 |:---------|:---------:|
-|**prev**: link to previous slide |`<a href="#" data-controls="prev" id="prev">Previous Pepper</a>`|
-|**next**: link to next |`<a href="#" data-controls="next" id="next">Next Pepper</a>`|
+|**prev**: link to previous slide |`<a href="#" data-controls="prev">Previous Pepper</a>`|
+|**next**: link to next |`<a href="#" data-controls="next">Next Pepper</a>`|
 |**onOff**: link to stop/start animation. Useless if continuous is set to false. |`<a href="#" data-controls="onoff" id="on-off">On off</a>`|
 
 ---

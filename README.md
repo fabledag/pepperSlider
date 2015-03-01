@@ -92,10 +92,10 @@ Note: When using these controls, don't use the overStop option (it's bad for UX)
 Implementation:
 
 	$('#slider').on('beforeAnimate', function(event) {
-		console.log('Slide that will become active : ' + event.slide.html());
+		console.log('Slide that will become active : ', event.slide.html());
 	});
 	$('#slider').on('afterAnimate', function(event) {
-		console.log('Slide that is now active : ' + event.slide.html());
+		console.log('Slide that is now active : ', event.slide.html());
 	});
 
 

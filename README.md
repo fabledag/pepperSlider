@@ -70,6 +70,7 @@ Pretty easy huh?
 |**startAt**: slide to display at the initialization|Number|1|
 |**stopAtBounds**: stop the slider when reaching first or last slide|Boolean|false|
 |**pagination**: pagination module (see Pagination usage)|Object|{id:"",type:""}|
+|**stopPropagation**: prevent bubbling on controls|Boolean|true|
 
 ### Controls
 

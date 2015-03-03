@@ -6,9 +6,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:DamienSeguin/pepperSlider.git"
+    "url": "git@github.com:dmnsgn/pepperSlider.git"
   },
-  "author": "Damien Seguin <damienseguin.me@gmail.com>",
+  "author": "Damien Seguin <https://twitter.com/dmnsgn>",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.4"

@@ -1,15 +1,14 @@
 module.exports = function(grunt) {
     "use strict";
-  
+
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
         uglify : {
             options: {
                 banner: "/*\n" +
-                        " * <%= pkg.name %> - pepperSlider is not another jQuery slider plugin.\n" +
-                        " * It is easy/ready to use, multipurpose, ready for parallax, compatible, light, customizable...\n" +
+                        " * <%= pkg.name %>\n" +
                         " *\n" +
-                        " * Copyright (c) 2012-2014 Damien SEGUIN - http://damienseguin.me\n" +
+                        " * Copyright (c) 2012-2015 Damien SEGUIN - http://damienseguin.me\n" +
                         " *\n" +
                         " * Licensed under the MIT license:\n" +
                         " *   http://www.opensource.org/licenses/mit-license.php\n" +
@@ -25,7 +24,7 @@ module.exports = function(grunt) {
             }
         }
     });
-    
+
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.registerTask("default", ["uglify"]);
 

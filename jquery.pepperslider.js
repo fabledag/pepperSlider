@@ -1,16 +1,14 @@
 /*
- * pepperSlider - pepperSlider is not another jQuery slider plugin.
- * It is easy/ready to use, multipurpose, ready for parallax, compatible, light, customizable...
+ * pepperSlider
  *
- * Copyright (c) 2012-2014 Damien SEGUIN - http://damienseguin.me
+ * Copyright (c) 2012-2015 Damien SEGUIN - http://damienseguin.me
  *
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  *
- * Version: 2.0.3
+ * Version: 2.0.4
  *
  */
-
 ;
 (function($, window, undefined) {
 
@@ -190,7 +188,7 @@
 				slide: $newActiveList
 			});
 			this.$element.trigger(e);
-			
+
 			// Animate
 			if ($("html").hasClass("no-csstransitions") && this.options.animation == "fade") {
 				oldActive.fadeOut();
@@ -198,9 +196,15 @@
 			}
 
 			if (this.options.animation == "cycle") {
-				this.$elementList.stop(true).animate({
-					"left": -$newActiveList.position().left
-				}, this.options.speed, this.options.easing);
+				if ($("html").hasClass("no-csstransitions")) {
+					this.$elementList.stop(true).animate({
+						"left": -$newActiveList.position().left
+					}, this.options.speed, this.options.easing);
+				} else {
+					this.$elementList.css({
+						"left": -$newActiveList.position().left
+					});
+				}
 			}
 
 			// Parallax

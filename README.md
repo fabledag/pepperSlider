@@ -1,6 +1,6 @@
 # [pepperSlider jQuery Plugin](https://github.com/DamienSeguin/pepperSlider)
 
-pepperSlider is not another jQuery slider Plugin.  
+pepperSlider is not another jQuery slider Plugin.
 It contains the basics features you can expect from one of these sliders, but in a very concise way (less than 6Ko) and with a great retro-compatibility (up to IE6).
 
 pepperSlider is:
@@ -63,7 +63,7 @@ Pretty easy huh?
 |**timer**: display duration|Number|3000|
 |**speed**: animation duration|Number|300|
 |**parallax**: class for a parallax container (see Parallax usage)|Number|1000|
-|**easing**: easing type for parallax|String|linear|
+|**easing**: easing type for parallax and cycle if no-csstransitions detected|String|linear|
 |**touch**: enable use of touch events.|Boolean|false|
 |**touchSensitivity**: set length of the swipe.|Number|30|
 |**overStop**: stop the animation when mouse hover the container.|Boolean|false|

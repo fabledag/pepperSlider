@@ -7,11 +7,9 @@
         "slideshow",
         "parallax"
     ],
-    "version": "2.0.4",
+    "version": "2.0.5",
     "author": {
-        "name": "Damien SEGUIN",
-        "email": "damienseguin.me@gmail.com",
-        "url": "http://damienseguin.me/"
+        "name": "Damien SEGUIN"
     },
     "licenses": [
         {

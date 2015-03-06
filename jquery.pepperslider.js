@@ -6,7 +6,7 @@
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  *
- * Version: 2.0.4
+ * Version: 2.0.5
  *
  */
 ;
@@ -56,6 +56,7 @@
 		this.options = $.extend({}, defaults, options);
 		this._defaults = defaults;
 		this._name = pluginName;
+		this.activeSlide = this.options.startAt;
 
 		this._init();
 	};
@@ -72,9 +73,8 @@
 				this.isRunning = true;
 				this.interval = setInterval($.proxy(this._switchActive, this), this.options.timer);
 			}
-			if (this.options.animation == "cycle") {
-				this.$elementList.css("width", this.length * this.$element.width());
-			}
+			this.resetElementListWidth();
+
 			if (this.options.stopAtBounds) {
 				this.reachBound = this.startAt == this.length ? true : false;
 			}
@@ -116,7 +116,7 @@
 					}
 				});
 			}
-			if (this.options.touch) this.$element.on('touchstart', $.proxy(this.onTouchStart, this));
+			if (this.options.touch) this.$element.on('touchstart', $.proxy(this._onTouchStart, this));
 			if (this.options.overStop) this.$element.on("mouseenter mouseleave", $.proxy(this._on, this));
 		},
 		_on: function(e) {
@@ -140,16 +140,22 @@
 				}
 			}
 		},
-		onTouchStart: function(e) {
+		resetElementListWidth: function(animate) {
+			if (this.options.animation == "cycle") {
+				this.$elementList.css("width", this.length * this.$element.width());
+				if (animate) this._animate(this.activeSlide);
+			}
+		},
+		_onTouchStart: function(e) {
 			var originalEvent = e.originalEvent;
 			if (originalEvent.touches.length == 1) {
 				startX = originalEvent.touches[0].pageX;
 				startY = originalEvent.touches[0].pageY;
 				isMoving = true;
-				this.$element.on('touchmove', $.proxy(this.onTouchMove, this));
+				this.$element.on('touchmove', $.proxy(this._onTouchMove, this));
 			}
 		},
-		onTouchMove: function(e) {
+		_onTouchMove: function(e) {
 			var originalEvent = e.originalEvent;
 			if (isMoving) {
 				var x = originalEvent.touches[0].pageX;
@@ -157,7 +163,7 @@
 				var dx = startX - x;
 				var dy = startY - y;
 				if (Math.abs(dx) >= this.options.touchSensitivity) {
-					this.resetTouch();
+					this._resetTouch();
 					if (dx > 0) {
 						// Left
 						this._switchActive("next");
@@ -168,8 +174,8 @@
 				}
 			}
 		},
-		resetTouch: function() {
-			this.$element.off('touchmove', $.proxy(this.onTouchMove, this));
+		_resetTouch: function() {
+			this.$element.off('touchmove', $.proxy(this._onTouchMove, this));
 			startX = null;
 			isMoving = false;
 		},
@@ -304,6 +310,8 @@
 					this.interval = setInterval($.proxy(this._switchActive, this), this.options.timer);
 				}
 			}
+
+			this.activeSlide = $targetIndex;
 
 			this._animate($targetIndex);
 		}

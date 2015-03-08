@@ -15,6 +15,10 @@ pepperSlider is:
 
 
 ## Basic implementation
+Clone or npm install
+
+	npm install pepperslider
+
 Include at the end of your page, just before the `</body>` tag:
 
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
@@ -46,6 +50,7 @@ Put the code below in your HTML where you want:
 See `css/main.css` for a good starting point.
 
 In a script file :
+
 	$("#slider").pepperSlider();
 
 Pretty easy huh?

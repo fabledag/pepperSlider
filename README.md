@@ -22,7 +22,7 @@ Clone or npm install
 Include at the end of your page, just before the `</body>` tag:
 
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-	<script type="text/javascript" src="js/jquery.pepperslider.js"></script>
+	<script src="js/jquery.pepperslider.js"></script>
 	<script src="js/main.js"></script>
 
 Put the code below in your HTML where you want:

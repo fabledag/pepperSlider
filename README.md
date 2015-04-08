@@ -17,41 +17,49 @@ pepperSlider is:
 ## Basic implementation
 Clone or npm install
 
-	npm install pepperslider
+```bash
+$ npm install pepperslider
+```
 
 Include at the end of your page, just before the `</body>` tag:
 
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-	<script src="js/jquery.pepperslider.js"></script>
-	<script src="js/main.js"></script>
+```javascript
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+<script src="js/jquery.pepperslider.js"></script>
+<script src="js/main.js"></script>
+```
 
 Put the code below in your HTML where you want:
 
-	<div id="slider">
-		<ul>
-			<li class="red">
-				<h2>Red pepper ?</h2>
-			</li>
-			<li class="green">
-				<h2>Why not green ?</h2>
-			</li>
-			<li class="yellow">
-				<h2>What about yellow ?</h2>
-			</li>
-			<li class="black">
-				<h2>And black ?</h2>
-			</li>
-			<li class="orange">
-				<h2>You say ? Orange ?</h2>
-			</li>
-		</ul>
-	</div>
+```html
+<div id="slider">
+	<ul>
+		<li class="red">
+			<h2>Red pepper ?</h2>
+		</li>
+		<li class="green">
+			<h2>Why not green ?</h2>
+		</li>
+		<li class="yellow">
+			<h2>What about yellow ?</h2>
+		</li>
+		<li class="black">
+			<h2>And black ?</h2>
+		</li>
+		<li class="orange">
+			<h2>You say ? Orange ?</h2>
+		</li>
+	</ul>
+</div>
+```
 
 See `css/main.css` for a good starting point.
 
 In a script file :
 
-	$("#slider").pepperSlider();
+```javascript
+$("#slider").pepperSlider();
+```
 
 Pretty easy huh?
 
@@ -97,32 +105,33 @@ Note: When using these controls, don't use the overStop option (it's bad for UX)
 
 Implementation:
 
-	$('#slider').on('beforeAnimate', function(event) {
-		console.log('Slide that will become active : ', event.slide.html());
-	});
-	$('#slider').on('afterAnimate', function(event) {
-		console.log('Slide that is now active : ', event.slide.html());
-	});
-
+```javascript
+$('#slider').on('beforeAnimate', function(event) {
+	console.log('Slide that will become active : ', event.slide.html());
+});
+$('#slider').on('afterAnimate', function(event) {
+	console.log('Slide that is now active : ', event.slide.html());
+});
+```
 
 ### Pagination usage
 The *pagination* option must be an object with an id for the container of the pagination (list of slides links) and a type namely a *number* for a numeric pagination or an *array* of *string* for a custom pagination.
 
 ### Parallax usage
 
-
-	<li class="red">
-		<h2>Red pepper ?</h2>
-		<div class="pepperSliderParallaxClass">
-			<img src="redPepperTop.png" alt=" " data-offset="500">
-			<img src="redPepperRight.png" alt=" " data-offset="500">
-			<p data-offset="200">
-				What a wonderful pepper !
-			</p>
-			<i class="icon" data-offset="0"></i>
-		</div>
-	</li>
-
+```html
+<li class="red">
+	<h2>Red pepper ?</h2>
+	<div class="pepperSliderParallaxClass">
+		<img src="redPepperTop.png" alt=" " data-offset="500">
+		<img src="redPepperRight.png" alt=" " data-offset="500">
+		<p data-offset="200">
+			What a wonderful pepper !
+		</p>
+		<i class="icon" data-offset="0"></i>
+	</div>
+</li>
+```
 ---
 Note: to cancel the effect to items in the container `.pepperSliderParallaxClass`, set the data-offset of these items to 0.
 

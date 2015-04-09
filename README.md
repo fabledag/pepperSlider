@@ -18,6 +18,10 @@ pepperSlider is:
 Clone or npm install
 
 ```bash
+git clone https://github.com/dmnsgn/pepperSlider.git
+```
+
+```bash
 $ npm install pepperslider
 ```
 

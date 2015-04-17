@@ -1,4 +1,4 @@
-# [pepperSlider jQuery Plugin](https://github.com/DamienSeguin/pepperSlider)
+# [pepperSlider jQuery Plugin](https://github.com/dmnsgn/pepperSlider)
 
 pepperSlider is not another jQuery slider Plugin.
 It contains the basics features you can expect from one of these sliders, but in a very concise way (less than 6Ko) and with a great retro-compatibility (up to IE6).
